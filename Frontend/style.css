@@ -1,0 +1,125 @@
+#page1{
+    background-color:rgb(43, 42, 42) ;
+    height: 100vh;
+    padding-top: 30px;
+}
+#my-logo{
+    width: 60px;
+    margin-left: 50px;
+    border-radius: 50%;
+
+}
+#nav-links{
+    display: flex;
+    float: right;
+}
+#nav-links a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.76);
+    margin: 20px;
+}
+#header{
+    border: 1px solid rgba(255, 255, 255, 0.829);
+    width: 90%;
+    border-radius: 10px;
+    justify-content: center;
+    margin: auto;
+}
+#main-content h1{
+    color: rgba(255, 255, 255, 0.89);
+    font-size: 50px;
+    margin-left: 40px;
+    margin-top: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#main-content p {
+    color: rgba(255, 255, 255, 0.527);
+    margin-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+#main-content button{
+    margin-left: 40px;
+    color: white;
+    background-color: rgb(243, 77, 17);
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+}
+#burger{
+    width: 60px;
+    border-radius:50%;
+}
+#main-image{
+    width: 300px;
+    height: 350px;
+    margin-left: 500px;
+    margin-top: -300px;
+    transform: rotate(-5deg);
+    
+}
+#middle-content{
+    float: right;
+    margin-top: -350px;
+    margin-right: 80px;
+}
+#middle-content label{
+    color: rgba(255, 255, 255, 0.671);
+    font-size: 25px;
+}
+#middle-content p{
+    color: rgba(255, 255, 255, 0.623);
+    font-size: 20px;
+}
+
+/*page 2*/
+
+#page2{
+    background-color:rgb(238, 87, 32);
+    height:50vh
+}
+#food1{
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: -30px;
+}
+
+#food2{
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+}
+#food3{
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+#content1{
+    margin-left: 30px;
+    margin-top: -50px;
+}
+#content1 p{
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
+}
+
+#content2{
+    margin-left: 500px;
+    margin-top: -280px;
+}
+#content2 p{
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
+}
+
+#content3{
+    margin-left: 1000px;
+    margin-top: -280px;
+}
+#content3 p{
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
+}
