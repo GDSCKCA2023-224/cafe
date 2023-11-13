@@ -1,10 +1,11 @@
 const express = require('express')
 const app = express()
+const PORT = 3000
 
 app.get('/', function (req, res) {
-    res.json({yay: 'node responded'})
+    res.json({ res: 'node responded' })
 })
 
-app.listen(3000, function () {
-    console.log('server listening on port 3000')
+app.listen(PORT, function () {
+    console.log(`server listening on port ${PORT}`)
 })
