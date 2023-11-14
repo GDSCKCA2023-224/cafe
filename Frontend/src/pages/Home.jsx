@@ -5,7 +5,11 @@ import food2 from "../assets/images/food2.jpg"
 import food3 from "../assets/images/food3.webp"
 import logo from "../assets/logo.png"
 import food from "../assets/food.png"
+import {useState} from "react";
 function Home() {
+
+    const [isNavOpen, setIsNavOpen] = useState(false)
+
     return (
         <>
 
@@ -15,17 +19,26 @@ function Home() {
                         <div className="flex flex-wrap items-center justify-between py-3 gap-6 md:py-4 md:gap-0">
                             <div className="w-full px-6 flex justify-between lg:w-max md:px-0">
                                 <a href="" aria-label="logo" className="flex space-x-2 items-center">
-                                    <img src={logo} className="w-12" alt="tailus logo" width="144" height="133" />
+                                    <img src={logo} className="w-12" alt="kramer food logo" width="144" height="133" />
                                     <span className="text-2xl font-bold text-yellow-900">Kramer <span className="text-yellow-700">Food</span></span>
                                 </a>
 
-                                <button aria-label="humburger" id="hamburger" className="relative w-10 h-10 -mr-2 lg:hidden">
-                                    <div aria-hidden="true" id="line" className="inset-0 w-6 h-0.5 m-auto rounded bg-yellow-900 transtion duration-300"></div>
-                                    <div aria-hidden="true" id="line2" className="inset-0 w-6 h-0.5 mt-2 m-auto rounded bg-yellow-900 transtion duration-300"></div>
+                                <button onClick={ () => { setIsNavOpen(!isNavOpen) }} aria-label="humburger" id="hamburger" className="relative w-10 h-10 -mr-2 lg:hidden">
+                                    {!isNavOpen &&
+                                        <div aria-hidden="true" id="line" className="inset-0 w-6 h-0.5 m-auto rounded bg-yellow-900 transtion duration-300"></div>
+                                    }
+                                    {!isNavOpen &&
+                                        <div aria-hidden="true" id="line2" className="inset-0 w-6 h-0.5 mt-2 m-auto rounded bg-yellow-900 transtion duration-300"></div>
+                                    }
+                                    {isNavOpen &&
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    }
                                 </button>
                             </div>
 
-                            <div className="hidden w-full lg:flex flex-wrap justify-end items-center space-y-6 p-6 rounded-xl bg-white md:space-y-0 md:p-0 md:flex-nowrap md:bg-transparent lg:w-7/12">
+                            <div className={ ` ${ isNavOpen ? "" : "hidden" } w-full lg:flex flex-wrap justify-end items-center space-y-6 p-6 rounded-xl bg-white md:space-y-0 md:p-0 md:flex-nowrap md:bg-transparent lg:w-7/12`}>
                                 <div className="text-gray-600 lg:pr-4">
                                     <ul className="space-y-6 tracking-wide font-medium text-sm md:flex md:space-y-0">
                                         <li>
