@@ -1,10 +1,17 @@
 const express = require('express')
 const app = express()
+const PORT = 3000
 
-app.get('/', function (req, res) {
-    res.json({yay: 'node responded'})
-})
+app.use(express.json())
 
-app.listen(3000, function () {
-    console.log('server listening on port 3000')
+const users = require('./routes/Users')
+
+app.use('/', users);
+
+app.use(function(req, res, next) {
+    res.status(404).send("Page Not Found");
+});
+
+app.listen(PORT, () => {
+    console.log(`server listening on port ${PORT}`)
 })
