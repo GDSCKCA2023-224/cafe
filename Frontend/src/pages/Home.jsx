@@ -19,7 +19,7 @@ function Home() {
                             <div className="w-full px-6 flex justify-between lg:w-max md:px-0">
                                 <a href="" aria-label="logo" className="flex space-x-2 items-center">
                                     <img src={logo} className="w-12" alt="kramer food logo" width="144" height="133"/>
-                                    <span className="text-2xl font-bold text-yellow-900">Kramer <span
+                                    <span className="text-2xl font-bold text-yellow-900">KCA <span
                                         className="text-yellow-700">Food</span></span>
                                 </a>
 
