@@ -1,0 +1,30 @@
+const express = require(`express`);
+const mongoose = require(`mongoose`);
+const bcrypt = require(`bcrypt`);
+
+const customerSchema = new customerSchema({
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    userName: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    }
+});
+
+
+customerSchema.pre(`save`, async function (next){
+    try {
+        
+        
+    } catch(error) {
+        next(error);
+    }
+})
